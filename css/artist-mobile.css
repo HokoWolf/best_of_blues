@@ -36,28 +36,52 @@ header {
 }
 
 .burger {
-  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  margin: 40px 40px;
+  background-size: cover;
+  background-image: url(../img/menu.png);
+  cursor: pointer;
+  display: block;
 }
 
 input[type="checkbox"] {
   display: none;
 }
 
+input + .burger + div {
+  display: none;
+}
+
+input:checked + .burger + div {
+  display: block;
+}
+
 .main-menu {
   float: right;
-  position: relative;
-  margin-right: 100px;
-  line-height: 120px;
+  position: absolute;
+  display: none;
+  right: 0;
+  top: 90px;
+  padding: 10px;
+  border-radius: 2px;
+  background-color: #3f403f;
+  margin-right: 40px;
 }
 
 .menu-item {
-  display: inline-block;
-  margin: 0 20px;
+  margin: 10px 20px;
   padding: 10px;
 
+  color: #fff;
+  font-family: "Oswald", sans-serif;
   font-weight: 650;
   font-size: 24px;
   line-height: 24px;
+  text-decoration: none;
 }
 
 .menu-item a {
@@ -84,62 +108,4 @@ input[type="checkbox"] {
 
 .clear-fx {
   clear: both;
-}
-
-.container {
-  width: 95%;
-  margin: 0 auto;
-}
-
-.performers {
-  width: 100%;
-  text-align: center;
-}
-
-.singer {
-  display: inline-block;
-  width: 295px;
-  margin: 25px;
-  margin-top: 20px;
-  border-radius: 20px;
-  box-shadow: 2px 2px 20px #000;
-  transform: scale(1);
-  transition: 0.4s;
-}
-
-.singer:hover {
-  box-shadow: 5px 5px 50px #000;
-  transform: scale(1.05);
-  transition: 0.4s;
-}
-
-.singer a {
-  text-decoration: none;
-}
-
-.article-logo {
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px 20px 0 0;
-}
-
-.article-info {
-  padding: 10px;
-  border-radius: 0 0 20px 20px;
-  background-color: #3f403f;
-  color: #fff;
-  text-align: center;
-  line-height: 1.5;
-}
-
-.article-info > .title {
-  font-family: "Oswald", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.article-info > .nationality,
-.article-info > .year {
-  font-size: 18px;
 }
